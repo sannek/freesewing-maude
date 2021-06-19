@@ -1,3 +1,4 @@
+import draftNeckBase from './neckBase'
 import draftBase from './base'
 import { UP, LEFT, DOWN, RIGHT, BEAM, sleeveNotchPercentage, CM_FACTOR } from './constants';
 
@@ -18,6 +19,7 @@ export default function (part) {
     utils
   } = part.shorthand()
 
+  draftNeckBase(part);
   draftBase(part);
 
   const { chest, shoulderSlope, bustSpan, hpsToBust, highBust, waist } = measurements;
