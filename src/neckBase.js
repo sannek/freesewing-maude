@@ -53,15 +53,9 @@ export default function (part) {
   store.set("backNeckDepth", backNeckDepth)
   store.set("neckWidth", neckWidth)
 
-  // Complete?
-  if (complete) {
-    if (sa) {
-    }
-  }
-
-  // Paperless?
-  if (paperless) {
-  }
+  // Delete all the points and paths again, because all we need is these measurements.
+  for (let p in paths) delete paths[p];
+  for (let p in points) delete points[p];
 
   return part
 }

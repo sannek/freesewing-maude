@@ -1,3 +1,5 @@
+import draftNeckBase from './neckBase'
+import draftBase from './base'
 import { LEFT, DOWN, RIGHT, UP, sleeveNotchPercentage } from './constants';
 
 export default function (part) {
@@ -16,6 +18,9 @@ export default function (part) {
     store,
     utils
   } = part.shorthand()
+
+  draftNeckBase(part);
+  draftBase(part);
 
   const { chest, shoulderSlope, waist } = measurements;
   const { chestEase, waistEase } = options;

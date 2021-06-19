@@ -42,12 +42,8 @@ export default {
     "biceps"
   ],
   dependencies: {
-    base: "neckBase",
-    back: "base",
-  },
-  inject: {
-    back: "base",
-    front: "base"
+    front: "back",
+    sleeve: "front"
   },
   hide: ["neckBase", "base"],
   parts: ["back", "front", "sleeve"],
