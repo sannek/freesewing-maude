@@ -1,10 +1,10 @@
 {
-  "name": "maude",
-  "version": "0.0.2",
+  "name": "@skalk/maude",
+  "version": "0.0.3",
   "description": "bodice block with  bust darts",
   "author": "sannek",
   "license": "MIT",
-  "repository": "sannek/maude",
+  "repository": "sannek/freesewing-maude",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
