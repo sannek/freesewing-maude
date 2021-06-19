@@ -1,35 +1,58 @@
-import { version } from '../package.json'
+import { version } from "../package.json";
 
 // ?? 🤔 ?? --> https://en.freesewing.dev/packages/core/config
 
 export default {
-  name: 'maude',
+  name: "fitted-bodice",
   version,
-  design: 'sannek',
-  code: 'sannek',
-  department: 'womenswear',
-  type: 'block',
-  difficulty: 3,
+  design: "sannek",
+  code: "sannek",
+  department: "womenswear",
+  type: "block",
+  difficulty: 2,
   tags: [
-    'freesewing',
-    'design',
-    'diy',
-    'fashion',
-    'made to measure',
-    'parametric design',
-    'block',
-    'sewing',
-    'sewing pattern'
+    "freesewing",
+    "design",
+    "diy",
+    "fashion",
+    "made to measure",
+    "parametric design",
+    "block",
+    "sewing",
+    "sewing pattern"
   ],
   optionGroups: {
-    fit: ['size']
+    fit: ["chestEase", "waistEase"]
   },
-  measurements: [],
-  dependencies: {},
-  inject: {},
-  hide: [],
-  parts: ['box'],
+  measurements: [
+    "neck",
+    "bustSpan",
+    "chest",
+    "highBust",
+    "hpsToBust",
+    "hpsToWaistBack",
+    "hpsToWaistFront",
+    "shoulderSlope",
+    "waist",
+    "waistBack",
+    "shoulderToShoulder",
+    "shoulderToElbow",
+    "shoulderToWrist",
+    "wrist",
+    "biceps"
+  ],
+  dependencies: {
+    base: "neckBase",
+    back: "base",
+  },
+  inject: {
+    back: "base",
+    front: "base"
+  },
+  hide: ["neckBase", "base"],
+  parts: ["back", "front", "sleeve"],
   options: {
-    size: { pct: 50, min: 10, max: 100 }
+    chestEase: { pct: 10, min: 5, max: 25 },
+    waistEase: { pct: 10, min: 5, max: 25 }
   }
-}
+};
